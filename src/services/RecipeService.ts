@@ -1,6 +1,6 @@
 //SERVICE - RECIPE
 import axios from "axios"
-import { CategoriesAPIResponseSchema, DrinksAPIResponse, RecipeAPIResponseSchema } from '../../schema/recipes-schemas'
+import { CategoriesAPIResponseSchema, DrinksAPIResponse, RecipeAPIResponseSchema } from '../schema/recipes-schemas'
 import { Drink, SearchFilter } from "../types";
 
 export const getCategories = async () => {

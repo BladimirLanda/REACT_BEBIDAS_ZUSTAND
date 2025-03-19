@@ -1,6 +1,6 @@
 //TYPES
 import { z } from "zod"
-import { CategoriesAPIResponseSchema, DrinkAPIResponse, DrinksAPIResponse, RecipeAPIResponseSchema, SearchFilterSchema } from "../../schema/recipes-schemas"
+import { CategoriesAPIResponseSchema, DrinkAPIResponse, DrinksAPIResponse, RecipeAPIResponseSchema, SearchFilterSchema } from "../schema/recipes-schemas"
 
 export type Categories = z.infer<typeof CategoriesAPIResponseSchema>;
 
