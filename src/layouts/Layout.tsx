@@ -9,7 +9,7 @@ import Notification from "../components/Notification"
 /*
 <Outlet /> es un componente especial en React que sirve como un marcador de posición para 
 renderizar componentes hijos dentro de un layout principal. Cuando se tienen rutas anidadas, 
-<Outlet /> indica dónde se renderizará el contenido de las rutas hijas dentro del layout principal.
+indica dónde se renderizará el contenido de las rutas hijas dentro del layout principal.
 */
 
 function Layout() {
