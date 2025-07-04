@@ -24,6 +24,7 @@ React obtiene el componente.
 */
 const IndexPage = lazy(() => import('./views/IndexPage'));
 const FavoritesPage = lazy(() => import('./views/FavoritesPage'));
+const GenerateAI = lazy(() => import('./views/GenerateAI'));
 
 /*
 React Router es una biblioteca que permite manejar la navegación y el enrutamiento en aplicaciones de React.
@@ -51,6 +52,7 @@ function AppRouter() {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Suspense fallback="cargando..."> <IndexPage /> </Suspense>} />
                 <Route path="/favoritos" element={<Suspense fallback="cargando..."> <FavoritesPage /> </Suspense>} />
+                <Route path="/generate" element={<Suspense fallback="cargando..."> <GenerateAI /> </Suspense>} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>

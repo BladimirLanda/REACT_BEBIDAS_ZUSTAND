@@ -80,16 +80,23 @@ function Header() {
                     </Link>
                 </div>
 
-                <nav className="text-xl sm:text-2xl flex gap-4">
+                <nav className="text-xl sm:text-2xl flex flex-col gap-4 sm:flex-row">
                   <NavLink to="/" className={( {isActive} ) =>
                     isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold hover:text-orange-200'
                   }>
-                  Inicio
+                    Inicio
                   </NavLink>
+
                   <NavLink to="/favoritos" className={( {isActive} ) =>
                     isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold hover:text-orange-200'
                   }>
-                  Favoritos
+                    Favoritos
+                  </NavLink>
+
+                  <NavLink to="/generate" className={( {isActive} ) =>
+                    isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold hover:text-orange-200'
+                  }>
+                    Generar IA✍️
                   </NavLink>
                 </nav>
             </div>

@@ -4,6 +4,7 @@ import { devtools } from "zustand/middleware"
 import { createRecipeSlice, RecipeSliceType } from "./recipeSlice"
 import { createFavoriteSlice, FavoriteSliceType } from "./favoriteSlice"
 import { createNotificaionSlice, NotificaionSliceType } from "./notificationSlice"
+import { createAISlice, AISliceType } from "./aiSlice"
 
 /*
 Slice Pattern:
@@ -17,13 +18,14 @@ dos slices (RecipeSliceType y FavoriteSliceType) en un solo estado global.
 */
 
 //Store
-const useAppStore = create<RecipeSliceType & FavoriteSliceType & NotificaionSliceType>()(
+const useAppStore = create<RecipeSliceType & FavoriteSliceType & NotificaionSliceType & AISliceType>()(
     devtools(
         (...a) => ({
             //(...a) Captura los argumento del StoreGlobal (set, get, store)
             ...createRecipeSlice(...a),
             ...createFavoriteSlice(...a),
-            ...createNotificaionSlice(...a)
+            ...createNotificaionSlice(...a),
+            ...createAISlice(...a)
         })
     )
 );
